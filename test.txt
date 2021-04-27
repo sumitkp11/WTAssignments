@@ -1,0 +1,6 @@
+<b>Credit Card Details</b><br><br>
+Card Type:<br><br>
+<input type="radio" name="card" value="mastercard"> Mastercard<br><br>
+<input type="radio" name="card" value="visa"> Visa<br><br>
+<input type="radio" name="card" value="american_express"> American Express<br><br>
+<input type="radio" name="card" value="diners_club"> Diners Club
