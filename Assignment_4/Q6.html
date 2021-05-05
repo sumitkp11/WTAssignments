@@ -8,25 +8,24 @@
   <body>
     <form name="form1">
       Enter a number <input type="number" name="num" value="">
-      Result: <input type="text" name="result" value="here is result">
+      Result: <input type="number" name="result" value="">
       <input type="submit" name="Check Prime" onclick="">
       <input type="submit" name="Palindrome" onclick="">
       <input type="submit" name="Check Even/ Odd" onClick="evenodd()">
       <input type="submit" name="Find Factorial" onclick="">
     </form>
-    <script language="javascript">
+    <script >
       function prime(){
 
       }
       function evenodd(){
-        result1 = document.getElementById("num").value;
-        if(result1 % 2 == 0){
-          text = "Even";
+        var num = parseInt().form1.num.value);
+        if(num % 2 == 0){
+          form1.result.value = "Even";
         }
         else{
-          text = "Odd";
+          form1.result.value = "Odd";
         }
-        document.getElementById("result").innerHTML = text;
       }
     </script>
   </body>
