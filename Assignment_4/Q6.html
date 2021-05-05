@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 4-Q6</title>
+
+  </head>
+  <body>
+    <form name="form1">
+      Enter a number <input type="number" name="num" value="">
+      Result: <input type="text" name="result" value="here is result">
+      <input type="submit" name="Check Prime" onclick="">
+      <input type="submit" name="Palindrome" onclick="">
+      <input type="submit" name="Check Even/ Odd" onClick="evenodd()">
+      <input type="submit" name="Find Factorial" onclick="">
+    </form>
+    <script language="javascript">
+      function prime(){
+
+      }
+      function evenodd(){
+        result1 = document.getElementById("num").value;
+        if(result1 % 2 == 0){
+          text = "Even";
+        }
+        else{
+          text = "Odd";
+        }
+        document.getElementById("result").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
