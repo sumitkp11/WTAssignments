@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>A3 Order Form</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      Name: <input type="text" name="" value=""><br><br>
+      Email: <input type="email" name="" value=""><br><br>
+      Address: <textarea name="name" rows="5" cols="18"></textarea>
+      <br><br>
+      Postcode: <input type="number" name="" value=""><br><br>
+      <table border = "1px">
+          <tr>
+            <th>Product</th>
+            <th>Part Number</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+            <td></td>
+            <td><input type="number" name="" value=""></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="text-align:right">Total: <input type="text" name="" value=""></td>
+          </tr>
+      </table>
+      <br><br>
+      <table>
+        <tr>
+          <th>Credit Card Details</th>
+        </tr>
+        <tr>
+          <td>Card Type</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="card" value="mastercard">Mastercard</td>
+          <td>Card Number <input type="number" name="" value=""></td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="card" value="visa">Visa</td>
+          <td>Expiry Date   <input type="date" name="" value=""></td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="card" value="american_express">American Express</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="card" value="diners_club">Diners Club</td>
+        </tr>
+      </table>
+
+      Delivery Address: <textarea name="name" rows="5" cols="18"></textarea><br>
+      <br>
+      <button type="button" name="send_order">Send Order</button>
+      <button type="button" name="Clear Form">Clear Form</button>
+    </form>
+  </body>
+</html>
