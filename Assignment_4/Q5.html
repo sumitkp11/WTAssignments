@@ -1,0 +1,40 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function position(){
+
+    var str = document.getElementById('text1').value;
+    for(m=0; m<str.length; m++){
+      if(str.charAt(m)== 'a' || str.charAt(m)== 'e' || str.charAt(m)== 'i' || str.charAt(m)== 'o' || str.charAt(m)== 'u'){
+        document.getElementById('pos').value = m;
+        break;
+      }
+      else if(str.charAt(m)== 'A' || str.charAt(m)== 'E' || str.charAt(m)== 'I' || str.charAt(m)== 'O' || str.charAt(m)== 'U'){
+        document.getElementById('pos').value = m;
+        break;
+      }
+      else{
+        document.getElementById('pos').value = "No vowel found";
+      }
+
+    }
+  }
+
+
+
+    </script>
+  </head>
+  <body>
+  <fieldset style="display: inline-block; width:50%">
+    <legend> Position in the string of the left-most vowel</legend>
+
+  Enter a string: <input type = "text" id="text1" value="">
+  <br><br>
+  <button type="button" name="button" id="btn1" onclick="position()">Check</button>
+  <br><br>
+  Position: <input type="text" id="pos" value="" disabled>
+  </fieldset>
+  </body>
+</html>
