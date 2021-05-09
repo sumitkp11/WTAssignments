@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment-4_Q4</title>
+
+    <script type="text/javascript">
+    function add(){
+      var num1 = parseInt(document.getElementById('number1').value);
+      var num2 = parseInt(document.getElementById('number2').value);
+      var result = num1 + num2;
+      document.getElementById('result').value = result;
+    }
+    function sub(){
+      var num1 = parseInt(document.getElementById('number1').value);
+      var num2 = parseInt(document.getElementById('number2').value);
+      if(num2 > num1){
+      var result = num2 - num1;
+      }
+      else {
+        var result = num1 - num2;
+      }
+      document.getElementById('result').value = result;
+    }
+    function mul(){
+      var num1 = parseInt(document.getElementById('number1').value);
+      var num2 = parseInt(document.getElementById('number2').value);
+      var result = num1 * num2;
+      document.getElementById('result').value = result;
+    }
+    function divide(){
+      var num1 = parseInt(document.getElementById('number1').value);
+      var num2 = parseInt(document.getElementById('number2').value);
+      var result = num1 / num2;
+      document.getElementById('result').value = result;
+    }
+    function clr(){
+      document.getElementById('number1').value = '';
+      document.getElementById('number2').value = '';
+      document.getElementById('result').value = '';
+
+    }
+
+    </script>
+  </head>
+  <body>
+
+    <fieldset style="display: inline-block; width:1px">
+    <legend>Simple Calculator</legend>
+
+    <table>
+    <tr>
+      <td>Enter first number:</td>
+      <td></td>
+      <td></td>
+      <td><input type="number" name="num1" value="" id="number1"></td>
+    </tr>
+    <tr>
+      <td>Enter second number:</td>
+      <td></td>
+      <td></td>
+      <td><input type="number" name="num2" value="" id="number2"></td>
+    </tr>
+    <tr>
+      <td>Result:</td>
+      <td></td>
+      <td></td>
+      <td><input type="number" name="" value="" id="result"></td>
+    </tr>
+    </table><br>
+    <table>
+      <tr>
+        <td><button type="button" name="button"  onclick="add()">Add</button></td>
+        <td><button type="button" name="button"  onclick="sub()">Subtract</button></td>
+        <td><button type="button" name="button"  onclick="mul()">Multiply</button></td>
+        <td><button type="button" name="button"  onclick="divide()">Divide</button></td>
+        <td><button type="button" name="button"  onclick="clr()">Clear</button></td>
+      </tr>
+    </table>
+    </fieldset>
+
+  </body>
+</html>
