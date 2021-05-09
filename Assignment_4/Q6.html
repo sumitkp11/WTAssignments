@@ -1,32 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title>Assignment 4-Q6</title>
-
-  </head>
-  <body>
-    <form name="form1">
-      Enter a number <input type="number" name="num" value="">
-      Result: <input type="number" name="result" value="">
-      <input type="submit" name="Check Prime" onclick="">
-      <input type="submit" name="Palindrome" onclick="">
-      <input type="submit" name="Check Even/ Odd" onClick="evenodd()">
-      <input type="submit" name="Find Factorial" onclick="">
-    </form>
     <script >
-      function prime(){
-
-      }
       function evenodd(){
-        var num = parseInt().form1.num.value);
-        if(num % 2 == 0){
-          form1.result.value = "Even";
+        num1 = document.getElementById("num").value;
+        if(num1 % 2 == 0){
+          document.getElementById("result").value = 'Even';
         }
         else{
-          form1.result.value = "Odd";
+            document.getElementById("result").value = "Odd";
         }
       }
+
+      function clr(){
+      document.getElementById("num").value = "";
+      document.getElementById("result").value = "";
+    }
+
+    function factorial(){
+      num2 = document.getElementById("num").value;
+      let fact = num2;
+      for(i=1;i<num2;i++)
+      {
+        fact =fact * i;
+      }
+      document.getElementById("result").value = fact;
+    }
+
+    function palin(){
+    }
+
+    function reverse(){
+      num = document.getElementById("num").value;
+      rev = 0;
+      rem=0;
+      while(num>0){
+      rem = num % 10;
+      rev = (rev * 10) + rem;
+      num = Math.floor(num/10);
+    }
+    document.getElementById("result").value = rev;
+    }
+
+    function prime(){
+      num = document.getElementById("num").value;
+      flag = 0;
+      for(i=2; i<=Math.floor(num/2); ++i){
+        if(num % i ==0){
+          flag = 1;
+          break;
+        }
+      }
+
+      if(num==1){
+        printf("1 is not prime or composite");
+      }
+      else{
+        if(flag==0){
+          document.getElementById("result").value = "Prime Number";
+        }
+        else{
+          document.getElementById("result").value = "Not a Prime Number";
+        }
+      }
+    }
+
     </script>
+  </head>
+  <body>
+      <table>
+      <tr>
+      <td><b>Enter a number:</b> </td> <td></td> <td><input type="number" id="num" class="text" value=""></td><br><br>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Result: </b></td><td></td><td> <input type="text" id="result" value="" class= "text"></td><br><br>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td><button type="button" name="prime_button" onclick="prime()">Prime</button></td>
+      <td>
+      <button type="button" name="palin_button" onclick="palin()">Palindrome</button></td>
+      <td>
+      <button type="button" name="evenodd" onclick="evenodd()">Even/ Odd</button></td>
+      <td>
+      <button type="button" name="fact_button" onclick="factorial()">Factorial</button></td>
+      <td>
+      <button type="button" name="button" onclick="clr()">Clear</button></td>
+      <td>
+      <button type="button" name="rev_button" onclick="reverse()">Reverse</button></td>
+</table>
+
   </body>
 </html>

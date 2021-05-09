@@ -1,0 +1,13 @@
+.text{
+  background-color: #7dc8f0;
+  border: 1px;
+  height: 40px;
+  width: 300px;
+}
+button{
+  background-color: #88c8eb;
+  height: 30px;
+  width: 80px;
+  border-radius: 8px;
+
+}
