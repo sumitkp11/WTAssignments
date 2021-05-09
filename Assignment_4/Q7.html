@@ -1,49 +1,90 @@
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="style_Q7.css">
     <meta charset="utf-8">
     <title>Assignment-4_Q7</title>
     <script>
-      function functionName() {
+      function reset_btn(){
+        let textbox = document.getElementsByClassName("text_field");
+        for(i=0; i<textbox.length; i++){
+          textbox[i].value = "";
+        }
+        let check = document.getElementsByClassName("checked");
+        for(i=0; i<check.length; i++){
+          check[i].checked = false;
+        }
+      }
+
+      function check_btn(){
+        let entered_age = document.getElementById("age").value;
+        if(entered_age < 1){
+          alert("Please enter the age correctly");
+        }
+
+
+        name = document.getElementById("name").value;
+        if(isNaN(name)){
+
+        }
+        else{
+          alert("Please enter the correct name");
+        }
+        address = document.getElementById("address").value;
+        if(isNaN(address)){
+
+        }
+        else{
+          alert("Please enter the address");
+        }
+
+
+        var entered_email = document.getElementById("email_txt").value;
+        var n = entered_email.includes("@gmail.com");
+        var m = entered_email.includes("@hotmail.com");
+        if(n == false && m == false){
+          alert("Please enter a valid email id")
+        }
 
       }
     </script>
   </head>
   <body>
-    <center><b>ENTRY FROM</b></center>
-    <table>
+    <center><b><h1 class="t1">ENTRY FROM</h1></b></center>
+
+    <center><table>
       <tr>
-        <td>Enter your email id:</td>
+        <td class="t1">Enter your email id:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><input type="text" name="email" value="" id="email_txt" class="text_field"></td>
       </tr>
       <tr>
-        <td>Enter your Name:</td>
+        <td class="t1">Enter your Name:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><input type="text" name="name" value="" id="name" class="text_field"></td>
       </tr>
       <tr>
-        <td>Enter your Age:</td>
+        <td class="t1">Enter your Age:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><input type="number" name="age" value="" id="age" class="text_field"></td>
       </tr>
       <tr>
-        <td>Enter your Address:</td>
+        <td class="t1">Enter your Address:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><textarea rows="4" cols="20" name="address" value="" class="text_field" id="address"></textarea></td>
       </tr>
       <tr>
-        <td>Sex:</td>
+        <td class="t1">Sex:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="radio" name="sex" value="Female"><br>
-        <input type="radio" name="sex" value="Male"></td>
+        <td><input type="radio" name="sex" value="Female" id="sex_radio" class="checked"><label class="t2">Female</label><br>
+        <input type="radio" name="sex" value="Male" id="sex_radio1" class="checked"><label class="t2">Male</label></td>
       </tr>
       <tr>
-        <td>Nationality:</td>
+        <td class="t1">Nationality:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td><select name="nation" id="nation">
@@ -53,35 +94,37 @@
           </select></td>
       </tr>
       <tr>
-        <td>Languages Known: </td>
+        <td class="t1">Languages Known: </td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="checkbox" name="lang" value="c">C<br>
-            <input type="checkbox" name="lang" value="cpp">C++<br>
-            <input type="checkbox" name="lang" value="java">Java<br>
-            <input type="checkbox" name="lang" value="oth">Others<br></td>
+        <td><p  class="t1">select more than one</p>
+          <input type="checkbox" name="lang" value="c" class="checked"><label class="t2">C</label><br>
+            <input type="checkbox" name="lang" value="cpp" class="checked" ><label class="t2">C++</label><br>
+            <input type="checkbox" name="lang" value="java" class="checked"><label class="t2">Java</label><br>
+            <input type="checkbox" name="lang" value="oth" class="checked"><label class="t2">Others</label><br></td>
       </tr>
       <tr>
-        <td>Enter your Password:</td>
+        <td class="t1">Enter your Password:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><input type="password" name="pass" value="" id="pass_txt" class="text_field"></td>
       </tr>
       <tr>
-        <td>Re-type Password:</td>
+        <td class="t1">Re-type Password:</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
         <td>&nbsp&nbsp&nbsp&nbsp</td>
-        <td><input type="text" name="" value="" id="text1"></td>
+        <td><input type="text" name="pass1" value="" id="pass1_txt" class="text_field"></td>
       </tr>
-    </table>
+    </table></center>
     <br>
     <center><table>
       <tr>
-        <td><button type="button" name="button" id="reset_btn" onclick="reset_btn()">reset</button></td>
+        <td><button type="button" name="button" onclick="reset_btn()">reset</button></td>
         <td><button type="button" name="button" id="check_btn" onclick="check_btn()">check</button></td>
       </tr>
     </table></center>
-    <b><h2>Before submitting the data, please click the check button.</h2></b>
-    <center><button type="button" name="button" id="submit_btn" onclick="submit_btn()">submit</button></center>
+    <b><h2 class="t1">Before submitting the data, please click the check button.</h2></b>
+    <center><input type="submit" name="button1" id="submit_btn" value="submit"></center>
+
   </body>
 </html>
